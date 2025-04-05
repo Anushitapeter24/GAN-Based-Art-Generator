@@ -1,0 +1,11 @@
+fastapi 
+uvicorn 
+openai
+transformers 
+torch 
+huggingface_hub 
+diffusers 
+azure-ai-inference
+speechrecognition
+pyaudio
+accelerate
