@@ -1,0 +1,99 @@
+/* Basic CSS for the App */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Typing indicator */
+.dot-typing {
+  position: relative;
+  width: 10px;
+  margin-left: 15px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9E9E9E;
+  color: #9E9E9E;
+  animation: dot-typing 1.5s infinite linear;
+}
+
+.dot-typing::before,
+.dot-typing::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-typing::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9E9E9E;
+  color: #9E9E9E;
+  animation: dot-typing 1.5s infinite linear;
+  animation-delay: -0.5s;
+}
+
+.dot-typing::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9E9E9E;
+  color: #9E9E9E;
+  animation: dot-typing 1.5s infinite linear;
+  animation-delay: 0.5s;
+}
+
+@keyframes dot-typing {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+/* Transitions */
+button {
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
